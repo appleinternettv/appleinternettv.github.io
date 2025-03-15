@@ -11,6 +11,12 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-color: #E9E9E9; /* Fallback background color in case the image doesn't load or cover the entire viewport */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
         }
 
         h1 {
@@ -21,25 +27,45 @@
         
         }
         
-        a:hover {
+       a:hover {
+    color: #2A00FF; /* Hover state */
+}
 
-            colour: #2A00FF 
-        }
+a:visited {
+    color: #3109FB; /* Visited links */
+}
 
-        a:visted {
+a {
+    color: #0070c0; /* Default link color */
+}
 
-            colour: #3109FB 
-        }
-
-         a {
-
-            colour: #0070c0
-        }
         /* Add additional CSS styles for your content here */
 
     </style>
 </head>
 <body>
+
+     <script>
+        // Function to generate a random color
+        function getRandomColor() {
+            return '#' + Math.floor(Math.random()*16777215).toString(16);
+        }
+
+        // Function to create multiple links with random colors
+        function generateLinks(count) {
+            const container = document.body; // Append to body
+            for (let i = 0; i < count; i++) {
+                let link = document.createElement("a");
+                link.href = "https://magnificent-roof-c4a.notion.site/Sam-s-website-052915fe1ed442a3806e76956a54efee?pvs=74";
+                link.textContent = "Sam's Site " + (i + 1);
+                link.style.color = getRandomColor();
+                container.appendChild(link);
+            }
+        }
+
+        // Generate 50 links (you can change the number)
+        generateLinks(1000);
+    </script>
     <h1>SAMSAMSAMESAM</h1>
     <a href="https://magnificent-roof-c4a.notion.site/Sam-s-website-052915fe1ed442a3806e76956a54efee?pvs=74">sam's site</a>
 <a href="https://magnificent-roof-c4a.notion.site/Sam-s-website-052915fe1ed442a3806e76956a54efee?pvs=74">sam's site</a>
